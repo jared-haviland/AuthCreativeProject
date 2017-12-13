@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+    
+<head>
+    <title>Chirper Login</title>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/style.css" />
+</head>
+        
+<body> 
+
+    <h1>Welcome to Chirper!</h1>
+    <h3>(Definitely Not Twitter)</h3>
+
+<div class="form-and-buttons">
+    <div class="form-container">
+        <h2 class="form-header">Log In:</h2>
+        <form method="POST" action="/login">
+            <label>Username:</label>
+            <input type="text" id="username" name="username"><br>
+            <label>Password:</label>
+            <input type="password" id="password" name="password"><br>
+            <input type="submit" id="login" value="Login">
+        </form>
+    </div>
+</div>
+<div class="form-and-buttons">
+    <a id="signUpLink" href="/signup">Create New Account</a>
+</div>
+    <hr>
+    <span id="loginMsg">
+    <%= msg %>
+    </span>
+</body>
+        
+</html>

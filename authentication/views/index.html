@@ -1,0 +1,56 @@
+<!doctype html>
+<html ng-app="myOtherApp"> 
+    
+<head>
+
+    <title>Chirper</title>
+
+    <script src="https://www.gstatic.com/firebasejs/3.5.3/firebase.js"></script>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/style.css" />
+    <script src="http://code.angularjs.org/1.2.9/angular.min.js"></script>
+	<script src="https://cdn.firebase.com/libs/angularfire/2.1.0/angularfire.min.js"></script>
+    <script src="/javascripts/my_app.js"></script>
+	<script>
+	  // Initialize Firebase
+	  var config = {
+	    apiKey: "AIzaSyDVF9UdQ8rf2e04eeLWL5PvMoJFsKfYn4c",
+	    authDomain: "cs260-authcreativeproject.firebaseapp.com",
+	    databaseURL: "https://cs260-authcreativeproject.firebaseio.com",
+	    projectId: "cs260-authcreativeproject",
+	    storageBucket: "cs260-authcreativeproject.appspot.com",
+	    messagingSenderId: "231464554536"
+	  };
+	  firebase.initializeApp(config);
+	</script>
+
+</head>
+        
+<body>  
+    <div ng-controller="chatController">
+    	<h2 id="welcomeText">Welcome to Chirper, <%= username %>! Add a chirp below.
+    	</h2>
+    	<div class="form-and-buttons">
+    		<a id="logoutLink" href="/logout">Sign Out</a>
+    		<a id="editLink" href="/user">Edit Profile</a>
+    	</div>
+
+	<div class="form-and-buttons">
+		<form novalidate class="simple-form">
+	  		Chirp: <input type="text" ng-model="user.chat" /><br />
+	  		<input type="submit" ng-click="update(user)" value="Post" />
+		</form>
+	</div>
+
+		<ul style="list-style-type: none;">
+			<li ng-repeat='line in chats'>
+				<div class="chat-post">
+				{{line.from}}: {{line.body}}
+				</div>
+			</li>
+		</ul>
+	
+	</div>
+
+</body>
+      
+</html>

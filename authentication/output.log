@@ -1,0 +1,76 @@
+nohup: ignoring input
+before / Route
+/ Route
+Session {
+  cookie: 
+   { path: '/',
+     _expires: 2018-01-13T07:11:59.986Z,
+     originalMaxAge: 2628000000,
+     httpOnly: true },
+  msg: 'Authenticated as j',
+  user: '5a31979fb0949cf27705f65a',
+  username: 'j' }
+/ Route if user
+[0mGET / [32m200 [0m13.746 ms - 1613[0m
+[0mGET /stylesheets/style.css [36m304 [0m3.851 ms - -[0m
+[0mGET /javascripts/my_app.js [36m304 [0m4.999 ms - -[0m
+[0mGET /stylesheets/background.jpg [36m304 [0m7.851 ms - -[0m
+[0mGET /user/profile [36m304 [0m17.863 ms - -[0m
+/ Route
+Session {
+  cookie: 
+   { path: '/',
+     _expires: 2018-01-13T07:14:35.442Z,
+     originalMaxAge: 2628000000,
+     httpOnly: true } }
+/ Route else user
+[0mGET / [36m302 [0m3.966 ms - 56[0m
+/login Route
+[0mGET /login [32m200 [0m1.365 ms - 921[0m
+[0mGET /stylesheets/style.css [32m200 [0m2.254 ms - 906[0m
+[0mGET /stylesheets/background.jpg [32m200 [0m1.677 ms - 336350[0m
+[0mGET /favicon.ico [33m404 [0m1.269 ms - 199[0m
+/ Route
+Session {
+  cookie: 
+   { path: '/',
+     _expires: 2018-01-13T07:14:35.238Z,
+     originalMaxAge: 2628000000,
+     httpOnly: true },
+  msg: 'Authenticated as j',
+  user: '5a31979fb0949cf27705f65a',
+  username: 'j' }
+/ Route if user
+[0mGET / [36m304 [0m1.531 ms - -[0m
+[0mGET /stylesheets/style.css [36m304 [0m1.661 ms - -[0m
+[0mGET /javascripts/my_app.js [36m304 [0m1.563 ms - -[0m
+[0mGET /stylesheets/background.jpg [36m304 [0m2.601 ms - -[0m
+[0mGET /user/profile [36m304 [0m3.786 ms - -[0m
+/signup Route
+[0mGET /signup [32m200 [0m1.085 ms - 883[0m
+[0mGET /stylesheets/style.css [36m304 [0m0.858 ms - -[0m
+[0mGET /stylesheets/background.jpg [36m304 [0m3.523 ms - -[0m
+Begin exports.signup
+after new user exports.signup
+after hashing user exports.signup
+after email user exports.signup
+(node:30754) DeprecationWarning: Mongoose: mpromise (mongoose's default promise library) is deprecated, plug in your own promise library instead: http://mongoosejs.com/docs/promises.html
+In exports.signup
+null
+[0mPOST /signup [36m302 [0m32.279 ms - 46[0m
+/ Route
+Session {
+  cookie: 
+   { path: '/',
+     _expires: 2018-01-13T07:14:55.657Z,
+     originalMaxAge: 2628000000,
+     httpOnly: true },
+  msg: 'Authenticated as bobby',
+  user: '5a31984f0c71f62278650bc4',
+  username: 'bobby' }
+/ Route if user
+[0mGET / [32m200 [0m1.775 ms - 1617[0m
+[0mGET /stylesheets/style.css [36m304 [0m0.925 ms - -[0m
+[0mGET /javascripts/my_app.js [32m200 [0m0.760 ms - 1182[0m
+[0mGET /user/profile [32m200 [0m2.876 ms - 154[0m
+[0mGET /stylesheets/background.jpg [36m304 [0m1.014 ms - -[0m
